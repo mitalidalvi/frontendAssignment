@@ -1,0 +1,42 @@
+.programmes {
+    padding: 32px;
+}
+
+.programmes .programmesHeading {
+
+}
+
+.programmes .subPara {
+    margin-bottom: 60px;
+}
+
+.programmes .programmesCards {
+    margin: 100px 0;
+}
+
+
+/* Mobile View */ 
+@media (max-width: 768px) {
+    .programmes {
+        padding: 16px;
+    }
+
+    .programmes .programmesHeading {
+
+    }
+
+    .programmes .subPara {
+        margin-bottom: 30px;
+    }
+
+    .programmes .programmesCards {
+        margin: 50px 0;
+    }
+}
+
+@media (min-width: 1900px) {
+    .programmes {
+        margin: 0px 25%;
+        display: block;
+    }
+}

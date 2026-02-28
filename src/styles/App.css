@@ -1,0 +1,209 @@
+/* =========================================
+   GLOBAL BRAND SYSTEM – DARK UNIVERSITY
+   Fonts: Playfair Display (Headings)
+          Inter (Body)
+   ========================================= */
+
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =========================================
+   ROOT VARIABLES (BRAND SYSTEM)
+   ========================================= */
+:root {
+
+  /* ===== Background System ===== */
+  --color-bg-primary: #0f0f12;
+  --color-bg-surface: #18181c;
+  --color-bg-elevated: #222228;
+
+  /* ===== Brand Reds ===== */
+  --color-brand-primary: #bc0f2c;
+  --color-brand-hover: #d41736;
+  --color-brand-deep: #8f0c21;
+  --color-brand-bright: #e31b3f;
+
+  /* ===== Typography Colors ===== */
+  --color-text-heading: #ffffff;
+  --color-text-body: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+
+  /* ===== Spacing Scale ===== */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* ===== Border Radius ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+}
+
+
+/* =========================================
+   GLOBAL 
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #0f0f12 0%, #1a1a1f 100%);
+  color: var(--color-text-body);
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+
+/* =========================================
+   TYPOGRAPHY SYSTEM
+   ========================================= */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-text-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+  font-size: 1rem;
+  color: var(--color-text-body);
+}
+
+.small-text {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================
+   LAYOUT HELPERS
+   ========================================= */
+
+.section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.surface {
+  background-color: var(--color-bg-surface);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.elevated {
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+}
+
+
+/* =========================================
+   BUTTON SYSTEM
+   ========================================= */
+
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-brand-primary);
+  color: var(--color-brand-primary);
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-brand-bright);
+}
+
+
+
+/* =========================================
+   SELECTION COLOR
+   ========================================= */
+::selection {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+}
+
+
+@media (min-width: 1900px) {
+
+  .hero {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  .footer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+}

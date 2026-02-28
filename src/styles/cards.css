@@ -1,0 +1,132 @@
+.cardsContainer {
+
+}
+
+.cardsContainer #cardsWeb {
+    display: block;
+}
+
+.cardsContainer #cardsMob {
+    display: none;
+}
+
+#cardsWeb .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#cardsWeb .container .glass {
+    position: relative;
+    max-width: 80%;
+    min-width: 15%;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+}
+
+#cardsWeb .container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+#cardsWeb .container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#cardsWeb .container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+}
+
+.glass .courseImg {
+    background-color: #fff;
+}
+
+
+
+/* Mobile View */ 
+
+@media (max-width: 768px) {
+
+    .cardsContainer {
+
+    }
+
+    .cardsContainer #cardsWeb {
+        display: none;
+    }
+
+    .cardsContainer #cardsMob {
+        display: block;
+        overflow: hidden;
+    }
+
+    #cardsMob .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        flex-wrap: nowrap;          
+        gap: 20px;                  
+        overflow-x: auto;
+        justify-content: flex-start; 
+    }
+
+    #cardsMob .container .glass {
+        position: relative;
+        background: linear-gradient(#fff2, transparent);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        flex-shrink: 0;
+        margin: 0;
+        max-width: 100%;
+        min-width: 70%;
+        height: 200px;
+    }
+
+    .glass::before {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    #cardsMob .container .glass svg {
+        font-size: 2.5em;
+        fill: #fff;
+    }
+}

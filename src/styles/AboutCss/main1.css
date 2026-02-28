@@ -1,0 +1,146 @@
+.aboutSection {
+  background: #0f0f12;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.aboutLeft {
+  flex: 1;
+  min-width: 300px;
+}
+
+.aboutLeft h1 {
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.aboutLeft h1 span {
+  color: #bc0f2c;
+}
+
+.aboutLeft p {
+  color: #d4d4d8;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+
+.aboutButtons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: #bc0f2c;
+  color: #ffffff;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: #d41736;
+  transform: translateY(-3px);
+}
+
+.outlineBtn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #2a2a2f;
+  padding: 14px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.outlineBtn:hover {
+  border-color: #bc0f2c;
+  color: #bc0f2c;
+}
+
+
+.aboutRight {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.infoCard {
+  background: #18181c;
+  flex: 1 1 160px;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #222227;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.infoCard h3 {
+  color: #bc0f2c;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.infoCard p {
+  color: #a1a1aa;
+  font-size: 14px;
+}
+
+
+.infoCard:hover {
+  transform: translateY(-8px);
+  border-color: #bc0f2c;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Tablet View */
+@media (max-width: 992px) {
+  .aboutContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutLeft p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aboutButtons {
+    justify-content: center;
+  }
+
+  .aboutRight {
+    justify-content: center;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .aboutLeft h1 {
+    font-size: 30px;
+  }
+
+  .infoCard {
+    flex: 1 1 100%;
+  }
+}
